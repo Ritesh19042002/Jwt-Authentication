@@ -29,6 +29,12 @@ public class User implements UserDetails {
     private String password;
     private boolean enabled;
 
+    @Column(name="verification_code")
+    private String verificationCode;
+
+    @Column(name="verification_expiration")
+    private String verificationCodeExpiresAt;
+
     public User(String username, String password, String email) {
         this.username = username;
         this.password = password;
